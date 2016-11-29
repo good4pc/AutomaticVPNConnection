@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>PacketTunnel.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>AD0508DB1DEC3B8F00706BC6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>ADA261D61DE59B70007EFF73</key>
 		<dict>
 			<key>primary</key>

@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD64E6361DE865F200AC5C4B /* Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = AD64E6351DE865F200AC5C4B /* Sample.m */; };
-		AD8A7DE61DEBFBD40011B341 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8A7DE51DEBFBD40011B341 /* Accounts.framework */; };
-		AD9419441DEBFAF7001CD05C /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9419431DEBFAF7001CD05C /* NetworkExtension.framework */; };
+		AD0508E11DEC3B8F00706BC6 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0508E01DEC3B8F00706BC6 /* PacketTunnelProvider.swift */; };
+		AD0508E61DEC3B8F00706BC6 /* PacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AD0508DC1DEC3B8F00706BC6 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ADA261DB1DE59B70007EFF73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA261DA1DE59B70007EFF73 /* AppDelegate.swift */; };
 		ADA261DD1DE59B70007EFF73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA261DC1DE59B70007EFF73 /* ViewController.swift */; };
 		ADA261E01DE59B70007EFF73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA261DE1DE59B70007EFF73 /* Main.storyboard */; };
@@ -20,6 +19,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AD0508E31DEC3B8F00706BC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADA261CF1DE59B70007EFF73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD0508DB1DEC3B8F00706BC6;
+			remoteInfo = PacketTunnel;
+		};
 		ADA261EC1DE59B70007EFF73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADA261CF1DE59B70007EFF73 /* Project object */;
@@ -37,24 +43,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		AD64E62E1DE863FA00AC5C4B /* Embed Frameworks */ = {
+		AD0508E51DEC3B8F00706BC6 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolderSpec = 13;
 			files = (
+				AD0508E61DEC3B8F00706BC6 /* PacketTunnel.appex in Embed App Extensions */,
 			);
-			name = "Embed Frameworks";
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AD0508DC1DEC3B8F00706BC6 /* PacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD0508DF1DEC3B8F00706BC6 /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
+		AD0508E01DEC3B8F00706BC6 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		AD0508E21DEC3B8F00706BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD64E6331DE865F200AC5C4B /* ConnectToVpn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConnectToVpn-Bridging-Header.h"; sourceTree = "<group>"; };
-		AD64E6341DE865F200AC5C4B /* Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample.h; sourceTree = "<group>"; };
-		AD64E6351DE865F200AC5C4B /* Sample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sample.m; sourceTree = "<group>"; };
-		AD8A7DE51DEBFBD40011B341 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		AD9419431DEBFAF7001CD05C /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkExtension.framework; sourceTree = "<group>"; };
 		ADA261D71DE59B70007EFF73 /* ConnectToVpn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectToVpn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA261DA1DE59B70007EFF73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADA261DC1DE59B70007EFF73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,17 +75,21 @@
 		ADA261F61DE59B70007EFF73 /* ConnectToVpnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectToVpnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA261FA1DE59B70007EFF73 /* ConnectToVpnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectToVpnUITests.swift; sourceTree = "<group>"; };
 		ADA261FC1DE59B70007EFF73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADE8F8C81DE84630001E46D8 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = ../../../Desktop/NetworkExtension.framework; sourceTree = "<group>"; };
 		ADE8F8CA1DE85D8B001E46D8 /* ConnectToVpn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ConnectToVpn.entitlements; path = ConnectToVpn/ConnectToVpn.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AD0508D91DEC3B8F00706BC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADA261D41DE59B70007EFF73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD8A7DE61DEBFBD40011B341 /* Accounts.framework in Frameworks */,
-				AD9419441DEBFAF7001CD05C /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,14 +110,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD0508DD1DEC3B8F00706BC6 /* PacketTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				AD0508E01DEC3B8F00706BC6 /* PacketTunnelProvider.swift */,
+				AD0508E21DEC3B8F00706BC6 /* Info.plist */,
+				AD0508DE1DEC3B8F00706BC6 /* Supporting Files */,
+			);
+			path = PacketTunnel;
+			sourceTree = "<group>";
+		};
+		AD0508DE1DEC3B8F00706BC6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD0508DF1DEC3B8F00706BC6 /* PacketTunnel.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		ADA261CE1DE59B70007EFF73 = {
 			isa = PBXGroup;
 			children = (
 				ADE8F8CA1DE85D8B001E46D8 /* ConnectToVpn.entitlements */,
-				AD9419431DEBFAF7001CD05C /* NetworkExtension.framework */,
 				ADE8F7881DE83FE9001E46D8 /* vpn */,
 				ADA261EE1DE59B70007EFF73 /* ConnectToVpnTests */,
 				ADA261F91DE59B70007EFF73 /* ConnectToVpnUITests */,
+				AD0508DD1DEC3B8F00706BC6 /* PacketTunnel */,
 				ADA261D81DE59B70007EFF73 /* Products */,
 				ADE8F8C71DE84630001E46D8 /* Frameworks */,
 			);
@@ -118,6 +147,7 @@
 				ADA261D71DE59B70007EFF73 /* ConnectToVpn.app */,
 				ADA261EB1DE59B70007EFF73 /* ConnectToVpnTests.xctest */,
 				ADA261F61DE59B70007EFF73 /* ConnectToVpnUITests.xctest */,
+				AD0508DC1DEC3B8F00706BC6 /* PacketTunnel.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,8 +157,6 @@
 			children = (
 				ADA261DA1DE59B70007EFF73 /* AppDelegate.swift */,
 				ADA261DC1DE59B70007EFF73 /* ViewController.swift */,
-				AD64E6341DE865F200AC5C4B /* Sample.h */,
-				AD64E6351DE865F200AC5C4B /* Sample.m */,
 				ADA261DE1DE59B70007EFF73 /* Main.storyboard */,
 				ADA261E11DE59B70007EFF73 /* Assets.xcassets */,
 				ADA261E31DE59B70007EFF73 /* LaunchScreen.storyboard */,
@@ -167,8 +195,6 @@
 		ADE8F8C71DE84630001E46D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AD8A7DE51DEBFBD40011B341 /* Accounts.framework */,
-				ADE8F8C81DE84630001E46D8 /* NetworkExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -176,6 +202,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AD0508DB1DEC3B8F00706BC6 /* PacketTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD0508E71DEC3B8F00706BC6 /* Build configuration list for PBXNativeTarget "PacketTunnel" */;
+			buildPhases = (
+				AD0508D81DEC3B8F00706BC6 /* Sources */,
+				AD0508D91DEC3B8F00706BC6 /* Frameworks */,
+				AD0508DA1DEC3B8F00706BC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacketTunnel;
+			productName = PacketTunnel;
+			productReference = AD0508DC1DEC3B8F00706BC6 /* PacketTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		ADA261D61DE59B70007EFF73 /* ConnectToVpn */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADA261FF1DE59B70007EFF73 /* Build configuration list for PBXNativeTarget "ConnectToVpn" */;
@@ -183,11 +226,12 @@
 				ADA261D31DE59B70007EFF73 /* Sources */,
 				ADA261D41DE59B70007EFF73 /* Frameworks */,
 				ADA261D51DE59B70007EFF73 /* Resources */,
-				AD64E62E1DE863FA00AC5C4B /* Embed Frameworks */,
+				AD0508E51DEC3B8F00706BC6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AD0508E41DEC3B8F00706BC6 /* PBXTargetDependency */,
 			);
 			name = ConnectToVpn;
 			productName = ConnectToVpn;
@@ -240,6 +284,11 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "FTS-MAC-001";
 				TargetAttributes = {
+					AD0508DB1DEC3B8F00706BC6 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = XU3XTNFKT8;
+						ProvisioningStyle = Automatic;
+					};
 					ADA261D61DE59B70007EFF73 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = XU3XTNFKT8;
@@ -309,11 +358,19 @@
 				ADA261D61DE59B70007EFF73 /* ConnectToVpn */,
 				ADA261EA1DE59B70007EFF73 /* ConnectToVpnTests */,
 				ADA261F51DE59B70007EFF73 /* ConnectToVpnUITests */,
+				AD0508DB1DEC3B8F00706BC6 /* PacketTunnel */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AD0508DA1DEC3B8F00706BC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADA261D51DE59B70007EFF73 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,11 +398,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AD0508D81DEC3B8F00706BC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD0508E11DEC3B8F00706BC6 /* PacketTunnelProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ADA261D31DE59B70007EFF73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD64E6361DE865F200AC5C4B /* Sample.m in Sources */,
 				ADA261DD1DE59B70007EFF73 /* ViewController.swift in Sources */,
 				ADA261DB1DE59B70007EFF73 /* AppDelegate.swift in Sources */,
 			);
@@ -370,6 +434,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AD0508E41DEC3B8F00706BC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD0508DB1DEC3B8F00706BC6 /* PacketTunnel */;
+			targetProxy = AD0508E31DEC3B8F00706BC6 /* PBXContainerItemProxy */;
+		};
 		ADA261ED1DE59B70007EFF73 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ADA261D61DE59B70007EFF73 /* ConnectToVpn */;
@@ -402,6 +471,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AD0508E81DEC3B8F00706BC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				DEVELOPMENT_TEAM = XU3XTNFKT8;
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fingent.vpntest.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AD0508E91DEC3B8F00706BC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				DEVELOPMENT_TEAM = XU3XTNFKT8;
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fingent.vpntest.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		ADA261FD1DE59B70007EFF73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -496,6 +593,7 @@
 		ADA262001DE59B70007EFF73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -513,7 +611,7 @@
 					"$(PROJECT_DIR)/Versions/A",
 					"$(PROJECT_DIR)/Versions/Current",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fingent.vpntest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ConnectToVpn/ConnectToVpn-Bridging-Header.h";
@@ -525,6 +623,7 @@
 		ADA262011DE59B70007EFF73 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -542,7 +641,7 @@
 					"$(PROJECT_DIR)/Versions/A",
 					"$(PROJECT_DIR)/Versions/Current",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fingent.vpntest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ConnectToVpn/ConnectToVpn-Bridging-Header.h";
@@ -611,6 +710,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AD0508E71DEC3B8F00706BC6 /* Build configuration list for PBXNativeTarget "PacketTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD0508E81DEC3B8F00706BC6 /* Debug */,
+				AD0508E91DEC3B8F00706BC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		ADA261D21DE59B70007EFF73 /* Build configuration list for PBXProject "ConnectToVpn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
